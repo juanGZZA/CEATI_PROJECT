@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLA</title>
+</head>
+<body>
+    {% if noticias %}
+        <table>
+            <th>{{noticias.encabezado}}</th>
+            
+            {% for noti in noticias %}
+            <tr>
+                <td> {{ noti.texto }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <p>NO HAY NOTICAS!</p>
+    {% endif %}
+</body>
+</html>
