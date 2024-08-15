@@ -9,10 +9,11 @@
 <body>
     {% if noticias %}
         <table>
-            <th>{{noticias.encabezado}}</th>
+            <th>noticias:</th>
             
             {% for noti in noticias %}
             <tr>
+                <td> {{ noti.encabezado }} </td>
                 <td> {{ noti.texto }} </td>
             </tr>
             {% endfor %}
